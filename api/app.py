@@ -56,9 +56,9 @@ async def predict_equation(data: ImageData):
 
     shutil.move("segmented_characters.csv", "internals")
     res = {
-        "Entered_equation": operation,
-        "Formatted_equation": formatted_equation,
-        "solution": solution,
+        "Entered_equation": str(operation),
+        "Formatted_equation": str(formatted_equation),
+        "solution": str(solution),
     }
     return json.dumps(res)
 
